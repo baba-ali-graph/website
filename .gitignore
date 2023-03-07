@@ -1,0 +1,13 @@
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+/temp
+.env
+.env.*
+*.zip
+!.env.example
+Handz - 3D Library
+Iconsax
+~*.md   
