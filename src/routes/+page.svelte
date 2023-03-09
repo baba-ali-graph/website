@@ -3,7 +3,7 @@
   import { sectionBackgrounds } from '../constants';
   import { uiState } from '../store';
 
-  let isRenderWelcomeAnimation:boolean
+  let isRenderWelcomeAnimation: boolean;
 
   uiState.subscribe((ui) => {
     isRenderWelcomeAnimation = ui.isRenderWelcomeAnimation;
@@ -52,7 +52,7 @@
   /* ELEMENT STYLES */
 
   h3 {
-    font-family: Rubik Dirt;
+    font-family: 'Abril Fatface';
   }
   .notice-button {
     display: inline-block;

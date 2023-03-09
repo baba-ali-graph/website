@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import 'src/app.css';
+  import '../app.css';
   import HireMe from '../components/HireMe/HireMe.svelte';
   import Header from '../components/Header.svelte';
   import LicenseInfo from '../components/LicenseInfo.svelte';

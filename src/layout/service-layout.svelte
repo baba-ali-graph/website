@@ -40,7 +40,7 @@
   }
 
   .content-title {
-    font-family: Rubik Dirt;
+    font-family: 'Abril Fatface', 'Rubik Dirt';
 
     @apply text-3xl md:text-5xl my-4 text-center md:text-left;
   }
