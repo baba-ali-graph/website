@@ -184,3 +184,25 @@ struct WithLoaderProps {
 #[function_component(WithLoader)]
 fn with_loader
 ```
+
+```css
+<div
+  class='overflow-x-hidden box w-[100%] h-[400px] relative bg-yellow-400 m-auto'
+  > <div
+  class='circular absolute top-[75%] left-[50%] translate-x-[-50%] rounded-full w-[400px] h-[400px] bg-red-200'
+  > </div
+  > </div
+  > @keyframes
+  expander {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.circular {
+  animation: expander 2s ease-in-out 4000 reverse;
+}
+```

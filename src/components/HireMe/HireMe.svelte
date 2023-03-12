@@ -1,8 +1,8 @@
 <script lang="ts">
   import { uiState } from 'src/store';
-  import CategoryPicker from './CategoryPicker.svelte';
   import { hireFormAction } from 'src/api';
   import { MSG_SENT, ERR_MSG } from 'src/constants';
+  import CategoryPicker from './CategoryPicker.svelte';
 
   // Icons
   import Shop from 'src/assets/iconsax/shop.svelte';
@@ -33,9 +33,9 @@
     category = selCategory;
   };
 
-  const handleSubmit = async (evt) => {
+  const handleSubmit = async (evt: { target: HTMLFormElement }) => {
     const form = new FormData(evt.target);
-    let reqBody = {};
+    let reqBody = <Record<string, any>>{};
     //@ts-ignore
     for (let [key, val] of form) {
       reqBody[key] = val;
@@ -132,7 +132,7 @@
       />
     </div>
     <div class="mb-4" />
-  
+
     <div class="flex justify-center w-full">
       {#if successMsg}
         <div>{successMsg}</div>
@@ -142,19 +142,17 @@
         <button type="submit" class="btn btn-large"> Okay, I'm done </button>
       {/if}
     </div>
-
   </form>
   <div class="mb-[10em]" />
-  
-  {#if isOpen}
-  <button class="close-button" on:click={close}> <IconX /></button>
-  {/if}
 
+  {#if isOpen}
+    <button class="close-button" on:click={close}> <IconX /></button>
+  {/if}
 </div>
 
 <style lang="postcss">
   .hm-wrapper {
-    @apply absolute w-screen min-h-screen text-gray-800  bg-yellow-200 transition-all duration-300 z-[10000] ;
+    @apply absolute w-screen min-h-screen text-gray-800  bg-yellow-200 transition-all duration-300 z-[10000];
   }
 
   .content {
