@@ -1,7 +1,9 @@
 <script lang="ts">
+  import { onMount, onDestroy } from 'svelte';
+
   import { backInOut } from 'svelte/easing';
 
-  import { fly } from 'svelte/transition';
+  import { fly, fade } from 'svelte/transition';
   import { Directions } from '../constants';
   import { uiState } from '../store';
 

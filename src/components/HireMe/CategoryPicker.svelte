@@ -13,7 +13,7 @@
 <div class={`category-wrapper ${isActive ? 'is-active' : ''}`} role="radio" on:click={handleClick}>
   {#if Icon}
     <div class="category-icon-wrapper">
-      <Icon/>
+      <Icon />
     </div>
   {/if}
   <div class="category-label">{label}</div>

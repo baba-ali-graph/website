@@ -1,24 +1,51 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { fade } from 'svelte/transition';
 
   export let title: string = '';
+
+  let show = false;
+
+  $: console.log(show);
+
+  onMount(async () => {
+    show = true;
+  });
 </script>
 
-<section>
-  <div class="wrapper">
-    <div class="content">
-      <h3 class="content-title">{title}</h3>
+{#if show}
+  <section
+    use:fade={{
+      delay: 200,
+      duration: 500,
+      easing: 'ease',
+      x: 0,
+      y: 20,
+      opacity: 0,
+      delayOut: 0,
+      durationOut: 500,
+      easingOut: 'ease',
+      xOut: 0,
+      yOut: -20,
+      opacityOut: 0
+    }}
+    class=" {show ? 'fade-enter-active' : 'fade-leave-active'}"
+  >
+    <div class="wrapper">
+      <div class="content">
+        <h3 class="content-title">{title}</h3>
 
-      <div class="content-body">
-        <slot name="description" />
+        <div class="content-body">
+          <slot name="description" />
+        </div>
+      </div>
+
+      <div class="illustration-wrapper">
+        <slot name="illustration" />
       </div>
     </div>
-
-    <div class="illustration-wrapper">
-      <slot name="illustration" />
-    </div>
-  </div>
-</section>
+  </section>
+{/if}
 
 <style lang="postcss">
   section {

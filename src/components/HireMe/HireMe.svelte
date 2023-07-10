@@ -74,8 +74,8 @@
           name="name"
           bind:value={name}
           type="text"
-          placeholder="What do I call you?"
-          class=" input-bordered w-full input-lg"
+          placeholder="What do you go by?"
+          class=" input-bordered text-white w-full input-lg"
         />
       </label>
     </div>
@@ -117,7 +117,7 @@
         <input
           name="contactInfo"
           bind:value={contactInfo}
-          class=" block w-full input-lg"
+          class=" block w-full text-white  input-lg"
           placeholder="e.g email, twitter etc"
         />
       </label>
@@ -128,7 +128,7 @@
         name="misc"
         placeholder="Any other info you would like to tell me?"
         bind:value={misc}
-        class="p-4 block w-full input-bg"
+        class="p-4 block w-full text-white input-bg"
       />
     </div>
     <div class="mb-4" />
@@ -139,7 +139,7 @@
       {:else if isLoading}
         <i> Submitting in a jiffy...</i>
       {:else}
-        <button type="submit" class="btn btn-large"> Okay, I'm done </button>
+        <button type="submit" class="btn btn-large"> Submit </button>
       {/if}
     </div>
   </form>
