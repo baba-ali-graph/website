@@ -7,7 +7,6 @@
   import HireMe from '../components/HireMe/HireMe.svelte';
   import Header from '../components/Header.svelte';
   import LicenseInfo from '../components/LicenseInfo.svelte';
-  import TrailingEffect from '../components/TrailingEffect.svelte';
   import FloatingFooter from '../components/FloatingFooter.svelte';
   import LayoutTransition from 'src/layout/layout-transition.svelte';
 
@@ -17,7 +16,6 @@
 <title> Baba Ali </title>
 
 <div data-theme="dark">
-  <TrailingEffect />
   <HireMe />
   <Header />
   <LayoutTransition {path}>
