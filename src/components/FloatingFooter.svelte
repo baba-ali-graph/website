@@ -17,11 +17,6 @@
       </a>
     </li>
     <li class="avatar">
-      <a href="https://github.com/AleeyCreative" class="social">
-        <IconVCS/>
-      </a>
-    </li>
-    <li class="avatar">
       <a href="tel:08024711182" class="social">
         <IconMobilePhone />
       </a>
